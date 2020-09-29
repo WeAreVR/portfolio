@@ -6,10 +6,6 @@ public class Main {
         public static void main(String[] args) {
 
 
-            Triangle triangle = new Triangle();
-            Circle circle = new Circle();
-            circle.areal();
-            triangle.euclideanDistance();
         }
 
 
