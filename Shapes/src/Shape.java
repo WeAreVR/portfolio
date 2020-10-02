@@ -2,7 +2,7 @@ import java.awt.*;
 import java.awt.Rectangle;
 import java.lang.Math;
 
-public class Shape {
+public abstract class Shape {
 
     public Point center() {
         return null;
