@@ -3,21 +3,13 @@ import java.lang.Math;
 
 public abstract class Shape {
 
-    public Point center() {
-        return null;
-    }
+    abstract public Point center();
 
-    public double areal() {
-        return 0;
-    }
+    abstract public double areal();
 
-    public double circumference() {
-        return 0;
-    }
+    abstract public double circumference();
 
-    public boolean isPointInside(Point p) {
-        return true;
-    }
+    abstract public boolean isPointInside(Point p);
 
     public double euclideanDistance(Shape a, Shape b) {
         Point center_a = a.center();
