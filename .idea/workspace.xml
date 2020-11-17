@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f74e6f4d-3299-403a-ba78-141cfd24b3a6" name="Default Changelist" comment="" />
+    <list default="true" id="f74e6f4d-3299-403a-ba78-141cfd24b3a6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/ER diagram.PNG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/out/production/studentCourseGrades/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/out/production/studentCourseGrades/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/out/production/studentCourseGrades/sample/Model.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/out/production/studentCourseGrades/sample/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/out/production/studentCourseGrades/sample/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/out/production/studentCourseGrades/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/src/sample/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/src/sample/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/src/sample/Model.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/src/sample/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/src/sample/View.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/src/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentCourseGrades/studentCourseGrades.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentGradesDB/out/production/studentGradesDB/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentGradesDB/src/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Portofolio 3/studentGradesDB/studentGradesDB.iml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,21 +53,6 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,6 +64,8 @@
       <workItem from="1601464165645" duration="94000" />
       <workItem from="1601464317172" duration="2555000" />
       <workItem from="1601624991176" duration="239000" />
+      <workItem from="1605617394851" duration="12000" />
+      <workItem from="1605617508974" duration="39000" />
     </task>
     <servers />
   </component>

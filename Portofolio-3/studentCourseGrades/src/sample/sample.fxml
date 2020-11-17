@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TabPane prefHeight="500.0" prefWidth="700.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+        <tabs>
+            <Tab text="List of Students">
+                <content>
+                    <TableView prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                            <TableColumn prefWidth="162.0" text="Firstname" />
+                            <TableColumn minWidth="0.0" prefWidth="182.0" text="Lastname" />
+                            <TableColumn minWidth="0.0" prefWidth="208.0" text="City" />
+                            <TableColumn minWidth="0.0" prefWidth="148.0" text="Average grade" />
+                        </columns>
+                    </TableView>
+                </content>
+            </Tab>
+            <Tab text="List of Courses">
+                <content>
+                    <TableView prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                            <TableColumn prefWidth="195.0" text="Name" />
+                            <TableColumn prefWidth="191.0" text="Semester" />
+                            <TableColumn prefWidth="173.0" text="Teacher" />
+                            <TableColumn prefWidth="141.0" text="Name acronym" />
+                        </columns>
+                    </TableView>
+                </content>
+            </Tab>
+            <Tab text="Student info">
+                <content>
+                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                        <top>
+                            <Label text="Select student to see courses and grades" BorderPane.alignment="CENTER">
+                                <font>
+                                    <Font size="30.0" />
+                                </font>
+                                <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                </BorderPane.margin>
+                            </Label>
+                        </top>
+                        <bottom>
+                            <Button mnemonicParsing="false" text="EXIT" BorderPane.alignment="BOTTOM_RIGHT">
+                                <BorderPane.margin>
+                                    <Insets bottom="10.0" right="15.0" />
+                                </BorderPane.margin>
+                            </Button>
+                        </bottom>
+                        <center>
+                            <GridPane BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="344.0" minWidth="10.0" prefWidth="237.33333333333334" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="512.3333028157551" minWidth="10.0" prefWidth="350.66666666666663" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="471.0" minWidth="10.0" prefWidth="119.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints maxHeight="79.00000381469727" minHeight="10.0" prefHeight="79.00000381469727" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="73.33333333333333" minHeight="10.0" prefHeight="54.33333333333333" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="98.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="129.99998474121094" minHeight="10.0" prefHeight="54.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="154.00001525878906" minHeight="10.0" prefHeight="144.66666666666663" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <ComboBox fx:id="comboBoxStudents" prefHeight="39.0" prefWidth="289.0" GridPane.columnIndex="1" />
+                                    <Label alignment="CENTER_RIGHT" prefHeight="91.0" prefWidth="238.0" text="Choose a student:">
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                        <GridPane.margin>
+                                            <Insets right="10.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="LblStudentInfoName" alignment="CENTER" prefHeight="82.0" prefWidth="698.0" GridPane.columnSpan="2" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="16.0" />
+                           </font></Label>
+                                    <Label fx:id="LblStudentInfoCourse1" prefHeight="95.0" prefWidth="252.0" GridPane.rowIndex="2">
+                                        <GridPane.margin>
+                                            <Insets left="70.0" right="10.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="LblStudentInfoCourse2" prefHeight="83.0" prefWidth="250.0" GridPane.rowIndex="3">
+                                        <GridPane.margin>
+                                            <Insets left="70.0" right="10.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label prefHeight="114.0" prefWidth="188.0" text="Average grade:" GridPane.rowIndex="4">
+                                        <GridPane.margin>
+                                            <Insets left="120.0" right="10.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="LblStudentInfoGrade1" prefHeight="101.0" prefWidth="510.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="LblStudentInfoGrade2" prefHeight="77.0" prefWidth="476.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label fx:id="LblStudentInfoAvgGrade" prefHeight="71.0" prefWidth="471.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button mnemonicParsing="false" onAction="#getStudentGrades" text="View" GridPane.columnIndex="2" />
+                                </children>
+                            </GridPane>
+                        </center>
+                    </BorderPane>
+                </content>
+            </Tab>
+            <Tab text="Course info">
+                <content>
+                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                        <center>
+                            <GridPane BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="341.0" minWidth="10.0" prefWidth="232.33333333333334" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="492.33330281575513" minWidth="10.0" prefWidth="352.66666666666674" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="479.0" minWidth="10.0" prefWidth="134.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <ComboBox fx:id="comboBoxCourses" prefHeight="39.0" prefWidth="291.0" GridPane.columnIndex="1" />
+                                    <Label alignment="CENTER_RIGHT" prefHeight="128.0" prefWidth="243.0" text="Choose a course:">
+                                        <GridPane.margin>
+                                            <Insets right="10.0" />
+                                        </GridPane.margin>
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Label>
+                                    <Label fx:id="LblCourseInfoName" alignment="CENTER" prefHeight="110.0" prefWidth="700.0" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                    <Label alignment="CENTER_RIGHT" prefHeight="93.0" prefWidth="221.0" text="Teacher:" GridPane.rowIndex="2">
+                                        <GridPane.margin>
+                                            <Insets right="10.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="89.0" prefWidth="227.0" text="Average grade:" GridPane.rowIndex="3">
+                                        <GridPane.margin>
+                                            <Insets right="10.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="LblCourseInfoTeacher" prefHeight="108.0" prefWidth="476.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="LblCourseInfoAvgGrade" prefHeight="85.0" prefWidth="480.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button mnemonicParsing="false" onAction="#getCourseGrades" text="View" GridPane.columnIndex="2" />
+                                </children>
+                            </GridPane>
+                        </center>
+                        <top>
+                            <Label text="Select course to see information" BorderPane.alignment="CENTER">
+                                <font>
+                                    <Font size="30.0" />
+                                </font>
+                                <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                </BorderPane.margin>
+                            </Label>
+                        </top>
+                        <bottom>
+                            <Button mnemonicParsing="false" text="EXIT" BorderPane.alignment="BOTTOM_RIGHT">
+                                <BorderPane.margin>
+                                    <Insets bottom="10.0" right="15.0" />
+                                </BorderPane.margin>
+                            </Button>
+                        </bottom>
+                    </BorderPane>
+                </content>
+            </Tab>
+            <Tab text="Insert grade">
+                <content>
+                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                        <center>
+                            <GridPane BorderPane.alignment="CENTER">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="341.0" minWidth="10.0" prefWidth="232.33333333333334" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="492.33330281575513" minWidth="10.0" prefWidth="352.66666666666674" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="479.0" minWidth="10.0" prefWidth="134.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                <children>
+                                    <ComboBox fx:id="comboBoxGradeCourse" onAction="#insertGradeStudent" prefHeight="39.0" prefWidth="291.0" GridPane.columnIndex="1" />
+                                    <ComboBox fx:id="comboBoxGradeStudent" prefHeight="39.0" prefWidth="291.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="comboBoxGradeGrade" prefHeight="39.0" prefWidth="291.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label alignment="CENTER_RIGHT" prefHeight="128.0" prefWidth="243.0" text="Choose a course:">
+                                        <GridPane.margin>
+                                            <Insets right="10.0" />
+                                        </GridPane.margin>
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="128.0" prefWidth="243.0" text="Choose a student:" GridPane.rowIndex="1">
+                                        <GridPane.margin>
+                                            <Insets right="10.0" />
+                                        </GridPane.margin>
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="128.0" prefWidth="243.0" text="Enter grade:" GridPane.rowIndex="2">
+                                        <GridPane.margin>
+                                            <Insets right="10.0" />
+                                        </GridPane.margin>
+                                        <font>
+                                            <Font size="20.0" />
+                                        </font>
+                                    </Label>
+                                    <Label alignment="CENTER_RIGHT" prefHeight="89.0" prefWidth="227.0" GridPane.rowIndex="3">
+                                        <GridPane.margin>
+                                            <Insets right="10.0" />
+                                        </GridPane.margin>
+                                    </Label>
+                                    <Label fx:id="insertedGradeInfo" prefHeight="85.0" prefWidth="480.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button mnemonicParsing="false" onAction="#insertGrade" text="Submit" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                </children>
+                            </GridPane>
+                        </center>
+                        <top>
+                            <Label text="Select course to see information" BorderPane.alignment="CENTER">
+                                <font>
+                                    <Font size="30.0" />
+                                </font>
+                                <BorderPane.margin>
+                                    <Insets top="5.0" />
+                                </BorderPane.margin>
+                            </Label>
+                        </top>
+                        <bottom>
+                            <Button mnemonicParsing="false" text="EXIT" BorderPane.alignment="BOTTOM_RIGHT">
+                                <BorderPane.margin>
+                                    <Insets bottom="10.0" right="15.0" />
+                                </BorderPane.margin>
+                            </Button>
+                        </bottom>
+                    </BorderPane>
+                </content>
+            </Tab>
+        </tabs>
+    </TabPane>
