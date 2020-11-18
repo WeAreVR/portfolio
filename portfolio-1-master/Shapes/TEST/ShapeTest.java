@@ -23,7 +23,7 @@ public class ShapeTest {
         Point testP = new Point(5,4);
         Point testpp = new Point(5,6);
         Shape test = new Circle(testP,3);
-        assertEquals(true, test.isPointInside(testpp));
+        assertEquals(false, test.isPointInside(testpp));
     }
 
 
@@ -46,7 +46,7 @@ public class ShapeTest {
     void rectangleCircumference(){
         Point p = new Point(0,0);
         Rectangle test = new Rectangle(p,5,4);
-        assertEquals(18, test.circumference());
+        assertEquals(118, test.circumference());
     }
 
     @Test
